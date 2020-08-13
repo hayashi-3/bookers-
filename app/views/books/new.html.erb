@@ -1,43 +1,12 @@
-  <!-- CSSファイルの読み込み まだ！！-->
-  <h3>Books</h3>
-  <table>
-  <thead>
-  <tr>
-  	<th width="200">Title</th>
-  	<th width="300">Body</th>
-  </tr>
-  </thead>
-
-  <tbody>
-  <% @book.each do |post| %>
-  <tr>
-  <td>
-  <%= book.title %>
-  </td>
-  <td>
-  <%= book.body %>
-  </td>
-  <td>
-  <%= link_to "show",post_path(post.id) %>
-  <%= link_to "edit",edit_post_path(post.id) %>
-  <%= link_to "destroy", destroy_post_path(post.id),method::delete,"date-confirm" =>"Are you sure?" %>
-  </td>
-  </tr>
-  <% end %>
-  </tbody>
-  </table>
- 
-  <h3>New book</h3>
-
-  <!-- form_for部分 -->
-  <%= form_for(@book, url: '/books') do |f| %>
-
-  <h4>Title</h4>
-  <%= f.text_field :title %>
- 
-  <h4>Body</h4>
-  <%= f.text_area :body %>
- 
-  <%= f.submit 'Create Book' %>
- 
-<% end %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Bookers</title>
+</head>
+<body>
+   <h3>ようこそ Bookers へ！</h3>
+    <p>Bookersでは、さまざまな書籍に関するあなたの意見や</p>
+    <p>印象を共有し交換することができます</p>
+   <%= link_to "start", books_path(@book)%>
+</body>
+</html>

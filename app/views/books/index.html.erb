@@ -1,12 +1,42 @@
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Bookers</title>
-</head>
-<body>
-   <h3>ようこそ Bookers へ！</h3>
-    <p>Bookersでは、さまざまな書籍に関するあなたの意見や</p>
-    <p>印象を共有し交換することができます</p>
-   <a href = "books">start</a>
-</body>
-</html>
+<!-- CSSファイルの読み込み まだ！！-->
+  <h3>Books</h3>
+  <table>
+  <thead>
+  <tr>
+  	<th width="200">Title</th>
+  	<th width="300">Body</th>
+  <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @books.each do |book| %>
+  <tr>
+  <td>
+  <%= book.title %>
+  </td>
+  <td>
+  <%= book.body %>
+  </td>
+  <td>
+  <%= link_to "show",book_path(book.id) %>
+  <%= link_to "edit",edit_book_path(book.id) %>
+  <%= link_to "destroy", destroy_book_path(post.id), method: :delete, "data-confirm" => "Are you sure?" %>
+  </td>
+  </tr>
+  <% end %>
+  </tbody>
+  </table>
+
+ <h3>New book</h3>
+<!-- form_for部分 -->
+<%= form_for(@book) do |f| %>
+
+<h4>Title</h4>
+<%= f.text_field :title %>
+
+<h4>Body</h4>
+<%= f.text_area :body %>
+<%= f.submit 'Create Book' %>
+
+<% end %>
