@@ -5,5 +5,4 @@ Rails.application.routes.draw do
 
   get 'books/new'
   post 'books' => 'books#create'
-
 end
