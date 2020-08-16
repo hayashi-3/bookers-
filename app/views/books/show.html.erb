@@ -2,9 +2,14 @@
   <p><%= flash[:notice] %></p>
 <% end %>
 
-<p>Title:</p>
- <%= @book.title %>
-<p>Body:</p>
- <%= @book.body %>
-<%= link_to "Edit", edit_book_path(@book) %>
-<%= link_to "Back", books_path(@book) %>
+ <p class="youkoso2">
+  <strong>Title:</strong>
+  <%= @book.title %>
+  </p>
+ <p class="youkoso2">
+  <strong>Body:</strong>
+  <%= @book.body %>
+  </p>
+<%= link_to "Edit", edit_book_path(@book), {class: "youkoso4"} %>
+ |
+<%= link_to "Back", books_path(@book), {class: "youkoso5"} %>
