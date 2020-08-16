@@ -1,10 +1,10 @@
 <!-- CSSファイルの読み込み まだ！！-->
-  <h3>Books</h3>
+  <p class="youkoso">Books</p>
   <table>
   <thead>
   <tr>
-  	<th width="200">Title</th>
-  	<th width="300">Body</th>
+  	<th width="250">Title</th>
+  	<th width="350">Body</th>
   <th></th>
   </tr>
   </thead>
@@ -19,24 +19,25 @@
   <%= book.body %>
   </td>
   <td>
-  <%= link_to "show", book_path(book.id) %>
+  <%= link_to "show", books_path(book.id) %>
   <%= link_to "edit", edit_book_path(book.id) %>
-  <%= link_to "destroy", destroy_books_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %>
+  <%= link_to "destroy", book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %>
   </td>
   </tr>
   <% end %>
   </tbody>
   </table>
 
- <h3>New book</h3>
+ <p class="books-form1">New book</p>
 <!-- form_for部分 -->
 <%= form_for(@book) do |f| %>
 
-<h4>Title</h4>
-<%= f.text_field :title %>
+<p class="books-form2">Title</p>
+ <div class="books-form3"><%= f.text_field :title %>
+ </div>
 
-<h4>Body</h4>
-<%= f.text_area :body %>
-<%= f.submit 'Create Book' %>
-
+<p class="books-form2">Body</p>
+ <div class="books-form3"><%= f.text_area :body %>
+ <%= f.submit 'Create Book' %>
+ </div>
 <% end %>

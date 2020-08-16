@@ -41,7 +41,47 @@
   color:#333333;
   line-height:50px;
   font-size:13px;
-  margin-top: 50px;
+  margin-top:50px;
+}
+
+table th {
+  ont-family:"verdana", "arial", "helvetica", "sans-serif";
+  color:#333333;
+  font-size:14px;
+  font-weight: 700;
+}
+
+table td {
+  ont-family:"verdana", "arial", "helvetica", "sans-serif";
+  color:#333333;
+  font-size:14px;
+  padding-left: 33px;
+}
+
+.books-form1 {
+  font-family:"verdana", "arial", "helvetica", "sans-serif";
+  color:#333333;
+  font-weight: 700;
+  line-height:25px;
+  font-size:20px;
+  margin: 5px 0px 5px 30px;
+}
+
+.books-form2 {
+  font-family:"verdana", "arial", "helvetica", "sans-serif";
+  color:#333333;
+  line-height:20px;
+  font-size:13px;
+  margin: 5px 0px 5px 30px;
+}
+
+.books-form3 {
+  font-family:"verdana", "arial", "helvetica", "sans-serif";
+  color:#333333;
+  width:50px;
+  height:20px;
+  margin-left:30px;
+  margin-bottom:10px;
 }
 
 .edit {
