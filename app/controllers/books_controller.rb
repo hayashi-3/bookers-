@@ -2,7 +2,7 @@ class BooksController < ApplicationController
   def index
     @book = Book.new
     @books = Book.all.order(created_at: :asc)
-
+    flash[:notice] = "Book was successfully destroyted."
   end
 
   def show

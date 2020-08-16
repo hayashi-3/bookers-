@@ -1,4 +1,9 @@
-<!-- CSSファイルの読み込み まだ！！-->
+<% if flash[:notice] %>
+  <div class="flash">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
   <p class="youkoso">Books</p>
   <table>
   <thead>
